@@ -1,0 +1,20 @@
+<script>
+  //base map
+  var mymap = L.map('mapid').setView([13.18346, 99.115219], 4);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png', {
+    attribution: '©OpenStreetMap, ©CartoDB'
+  }).addTo(mymap);
+
+  //show marker
+  var marker1 = L.marker([19.269665, 79.453125]).addTo(mymap);
+  var marker2 = L.marker([19.394473, 85.09263]).addTo(mymap)
+  var marker3 = L.marker([19.051734, 72.246094]).addTo(mymap);
+  var marker4 = L.marker([25.263171, 85.09263]).addTo(mymap);
+  var marker5 = L.marker([25.143886, 79.453125]).addTo(mymap);
+  var marker6 = L.marker([25.620323, 72.246094]).addTo(mymap);
+
+  var array = [marker1, marker2, marker3, marker4, marker5, marker6]
+  array.forEach((el, i) => {
+    el.bindPopup(`You clicked marker: ${parseInt(i) + 1}`)
+  })
+</script>

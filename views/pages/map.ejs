@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- data head contains: meta html, link leaflet, styling #mapid -->
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <!-- data title from index.js (Backend) -->
+  <p>
+    <%= title %>
+  </p>
+  <div id="mapid"></div>
+  <!-- data maps from script.ejs -->
+  <%- include('../partials/script'); %>
+</body>
+</html>
